@@ -4,6 +4,54 @@
 <div class="container py-4">
     <h1 class="text-center mb-4">Welcome to Outlet Location</h1>
 
+    <!-- Bootstrap Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide mb-4" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ asset('images/poster 1.jpeg') }}" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Discover Amazing Locations</h5>
+                    <p>Explore outlets available in your city.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('images/poster 2.jpg') }}" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Find the Best Services</h5>
+                    <p>We provide high-quality services at every outlet.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{{ asset('images/poster3.png') }}" class="d-block w-100" alt="Slide 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Join Our Community</h5>
+                    <p>Register today and start managing your outlets.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
     <!-- Map -->
     <div id="map" style="height: 400px; width: 100%;"></div>
 
