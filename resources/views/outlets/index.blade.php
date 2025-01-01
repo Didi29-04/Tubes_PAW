@@ -30,7 +30,7 @@
                 <td class="text-center">{{ $outlet->latitude }}</td>
                 <td class="text-center">{{ $outlet->longitude }}</td>
                 <td class="text-center">
-                    <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $outlet->phone_number) }}" target="_blank">
+                    <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $outlet->phone_number) }}?text={{ urlencode('Halo, Apakah ini ' . $outlet->name . '?') }}" target="_blank">
                         {{ $outlet->phone_number }}
                     </a>
                 </td>
