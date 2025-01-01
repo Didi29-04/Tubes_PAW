@@ -7,6 +7,34 @@
     <!-- Map -->
     <div id="map" style="height: 400px; width: 100%;"></div>
 
+<!-- Outlet List -->
+<div class="mt-4">
+    <h2 class="text-center mb-3">Outlet List</h2>
+    <table class="table table-bordered">
+        <thead class="table-light">
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Latitude</th>
+                <th>Longitude</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($outlets as $index => $outlet)
+            <tr>
+                <td>{{ $index + 1 }}</td>
+                <td>{{ $outlet->name }}</td>
+                <td>{{ $outlet->address }}</td>
+                <td>{{ $outlet->latitude }}</td>
+                <td>{{ $outlet->longitude }}</td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
+</div>
+</div>
+
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         // Initialize the map
