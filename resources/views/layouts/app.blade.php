@@ -110,14 +110,62 @@
     </div>
 
     <!-- Footer -->
-    @guest
-    <footer class="bg-light text-center py-3 mt-auto border-top">
-        <div class="container">
-            <p class="mb-0">&copy; {{ date('Y') }} AHLI KUNCI. All rights reserved.</p>
-            <small>Explore our outlets and services. <a href="{{ route('login') }}">Login</a> to manage outlets or <a href="{{ route('register') }}">register</a>.</small>
+    <!-- Footer -->
+<footer class="footer bg-dark text-light py-4">
+    <div class="container">
+        <div class="row text-center text-md-start">
+            <!-- Logo and Slogan -->
+            <div class="col-md-3 mb-3 mb-md-0">
+                <h5 class="text-uppercase">LOGO</h5>
+                <p class="small">LOCKSMITH</p>
+            </div>
+            <!-- Column 1 -->
+            <div class="col-md-3 mb-3 mb-md-0">
+                <h6 class="text-uppercase">Links</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light text-decoration-none small">Weebly Themes</a></li>
+                    <li><a href="#" class="text-light text-decoration-none small">Pre-sale FAQs</a></li>
+                    <li><a href="#" class="text-light text-decoration-none small">Submit a Ticket</a></li>
+                </ul>
+            </div>
+            <!-- Column 2 -->
+            <div class="col-md-3 mb-3 mb-md-0">
+                <h6 class="text-uppercase">Services</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light text-decoration-none small">Services</a></li>
+                    <li><a href="#" class="text-light text-decoration-none small">Theme Tweak</a></li>
+                </ul>
+            </div>
+            <!-- Column 3 -->
+            <div class="col-md-3">
+                <h6 class="text-uppercase">Support</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-light text-decoration-none small">About Us</a></li>
+                    <li><a href="#" class="text-light text-decoration-none small">Contact Us</a></li>
+                    <li><a href="#" class="text-light text-decoration-none small">Resources</a></li>
+                </ul>
+            </div>
         </div>
-    </footer>
-    @endguest
+
+        <!-- Social Media -->
+        <div class="row mt-4">
+            <div class="col text-center">
+                <a href="#" class="text-light mx-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-light mx-2"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="text-light mx-2"><i class="bi bi-google"></i></a>
+                <a href="#" class="text-light mx-2"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="row mt-3">
+            <div class="col text-center">
+                <p class="small mb-0">&copy; {{ date('Y') }}. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
 
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>

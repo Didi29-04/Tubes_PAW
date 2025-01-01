@@ -58,10 +58,17 @@ class OutletController extends Controller
             'address' => 'required|string',
             'latitude' => 'required|numeric',
             'longitude' => 'required|numeric',
+            'phone_number' => 'required|string|max:15', // Validasi nomor telepon
         ]);
 
         $outlet = Outlet::findOrFail($id);
-        $outlet->update($request->all()); // Update data outlet
+        $outlet->update([
+            'name' => $request->name,
+            'address' => $request->address,
+            'latitude' => $request->latitude,
+            'longitude' => $request->longitude,
+            'phone_number' => $request->phone_number, // Perbarui nomor telepon
+        ]);
 
         Alert::success('Changed Successfully', 'Location Changed Successfully.');
         return redirect()->route('outlets.index');

@@ -23,6 +23,14 @@
                             <th>Longitude</th>
                             <td>{{ $outlet->longitude }}</td>
                         </tr>
+                        <tr>
+                            <th>Phone Number</th>
+                            <td>
+                                <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', $outlet->phone_number) }}" target="_blank">
+                                    {{ $outlet->phone_number }}
+                                </a>
+                            </td>
+                        </tr>
                     </table>
                     <a href="{{ route('map') }}" class="btn btn-secondary mt-3">Back to Map</a>
                 </div>
@@ -49,7 +57,7 @@
         // Add marker for the outlet
         L.marker([{{ $outlet->latitude }}, {{ $outlet->longitude }}])
             .addTo(map)
-            .bindPopup("<b>{{ $outlet->name }}</b><br>{{ $outlet->address }}")
+            .bindPopup("<b>{{ $outlet->name }}</b><br>{{ $outlet->address }}<br><a href='https://wa.me/{{ preg_replace('/[^0-9]/', '', $outlet->phone_number) }}' target='_blank'>Contact via WhatsApp</a>")
             .openPopup();
     });
 </script>

@@ -27,26 +27,38 @@
         @csrf
         @method('PUT')
 
+        <!-- Outlet Name -->
         <div class="mb-3">
             <label for="name" class="form-label">Outlet Name</label>
             <input type="text" name="name" id="name" class="form-control" value="{{ $outlet->name }}" required>
         </div>
 
+        <!-- Outlet Address -->
         <div class="mb-3">
             <label for="address" class="form-label">Outlet Address</label>
             <textarea name="address" id="address" class="form-control" rows="3" required>{{ $outlet->address }}</textarea>
         </div>
 
+        <!-- Latitude -->
         <div class="mb-3">
             <label for="latitude" class="form-label">Latitude</label>
             <input type="text" name="latitude" id="latitude" class="form-control" value="{{ $outlet->latitude }}" required>
         </div>
 
+        <!-- Longitude -->
         <div class="mb-3">
             <label for="longitude" class="form-label">Longitude</label>
             <input type="text" name="longitude" id="longitude" class="form-control" value="{{ $outlet->longitude }}" required>
         </div>
 
+        <!-- Phone Number -->
+        <div class="mb-3">
+            <label for="phone_number" class="form-label">Phone Number</label>
+            <input type="text" name="phone_number" id="phone_number" class="form-control" value="{{ $outlet->phone_number }}" required>
+            <small class="form-text text-muted">Masukkan nomor telepon dengan format internasional (misal: 628123456789).</small>
+        </div>
+
+        <!-- Buttons -->
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal">
             Save Changes
         </button>

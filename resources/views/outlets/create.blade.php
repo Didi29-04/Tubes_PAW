@@ -46,6 +46,13 @@
             <input type="text" name="longitude" id="longitude" class="form-control" value="{{ old('longitude') }}" required>
         </div>
 
+        <!-- Nomor Telepon -->
+        <div class="mb-3">
+            <label for="phone_number" class="form-label">Phone Number</label>
+            <input type="text" name="phone_number" id="phone_number" class="form-control" value="{{ old('phone_number') }}" required>
+            <small class="form-text text-muted">Masukkan nomor telepon dengan format internasional (misal: 628123456789).</small>
+        </div>
+
         <!-- Buttons -->
         <div class="d-flex gap-2">
             <a href="{{ route('outlets.index') }}" class="btn btn-secondary">Back to List</a>

@@ -9,6 +9,6 @@ class Outlet extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'address', 'latitude', 'longitude'];
+    protected $fillable = ['name', 'address', 'latitude', 'longitude', 'phone_number'];
 }
 
