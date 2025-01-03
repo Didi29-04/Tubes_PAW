@@ -100,11 +100,6 @@
                 <!-- Login Button -->
                 <button type="submit" class="btn-primary">Login</button>
             </form>
-
-            <div class="mt-3">
-                <a href="{{ route('password.request') }}" class="text-link">Forgot your password?</a> |
-                <a href="{{ route('register') }}" class="text-link">Create an account</a>
-            </div>
         </div>
     </div>
 </body>
